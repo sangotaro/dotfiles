@@ -1,3 +1,4 @@
+
 setlocal autoindent shiftwidth=4 tabstop=4 nowrap
 
 let php_sql_query = 1

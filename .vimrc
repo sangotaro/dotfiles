@@ -1,3 +1,5 @@
+" 基本的にはグローバルな設定だけ書く
+
 set nocompatible
 set showmatch showmode showcmd
 set laststatus=2
