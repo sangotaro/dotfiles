@@ -42,3 +42,8 @@ let g:netrw_alto = 1
 let g:netrw_altv = 1
 " netrwは常にtree view
 let g:netrw_liststyle = 3
+
+" python用の設定。あとでわける
+autocmd FileType python setl autoindent
+autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
