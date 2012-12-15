@@ -13,6 +13,9 @@ call vundle#rc()
 
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'mitechie/pyflakes-pathogen'
+Bundle 'reinh/vim-makegreen'
+Bundle 'lambdalisue/nose.vim'
+Bundle 'kchmck/vim-coffee-script'
 
 filetype indent plugin on
 
