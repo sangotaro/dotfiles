@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title></title>
+	<link rel="stylesheet" href="css/XXXX.css" media="all">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/XXXX.js"></script>
+</head>
+<body>
+</body>
+</html>

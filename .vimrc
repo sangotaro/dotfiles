@@ -60,3 +60,5 @@ endif
 
 nmap <Leader>n :NERDTreeToggle<CR>
 
+" テンプレート
+autocmd BufNewFile *.html 0r $HOME/.vim/template/html.txt
