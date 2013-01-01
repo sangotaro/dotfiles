@@ -16,6 +16,8 @@ Bundle 'mitechie/pyflakes-pathogen'
 Bundle 'reinh/vim-makegreen'
 Bundle 'lambdalisue/nose.vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'JavaScript-syntax'
+Bundle 'pangloss/vim-javascript'
 
 filetype indent plugin on
 
