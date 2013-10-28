@@ -3,7 +3,6 @@
 set nocompatible
 set showmatch showmode showcmd
 set laststatus=2
-set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 
 syntax on
 filetype off
@@ -18,6 +17,8 @@ Bundle 'lambdalisue/nose.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'JavaScript-syntax'
 Bundle 'pangloss/vim-javascript'
+Bundle 'tpope/vim-fugitive'
+Bundle 'itchyny/lightline.vim'
 
 filetype indent plugin on
 
@@ -61,6 +62,58 @@ if has('vim_starting') &&  file_name == ""
 endif
 
 nmap <Leader>n :NERDTreeToggle<CR>
+
+" lightline
+let g:lightline = {
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'fugitive', 'filename' ] ]
+  \ },
+  \ 'component_function': {
+  \   'fugitive': 'MyFugitive',
+  \   'readonly': 'MyReadonly',
+  \   'modified': 'MyModified',
+  \   'filename': 'MyFilename'
+  \ },
+  \ 'separator': { 'left': '⮀', 'right': '⮂' },
+  \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+  \ }
+
+function! MyModified()
+  if &filetype == "help"
+    return ""
+  elseif &modified
+    return "+"
+  elseif &modifiable
+   return ""
+  else
+    return ""
+  endif
+endfunction
+
+function! MyReadonly()
+  if &filetype == "help"
+    return ""
+  elseif &readonly
+    return "⭤"
+  else
+    return ""
+  endif
+endfunction
+
+function! MyFugitive()
+  if exists("*fugitive#head")
+    let _ = fugitive#head()
+    return strlen(_) ? '⭠ '._ : ''
+  endif
+  return ''
+endfunction
+
+function! MyFilename()
+  return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
+    \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+    \ ('' != MyModified() ? ' ' . MyModified() : '')
+endfunction
 
 " テンプレート
 autocmd BufNewFile *.html 0r $HOME/.vim/template/html.txt
