@@ -1,5 +1,12 @@
 #! /bin/sh
+
+DOTFILES_PATH=`pwd`
+cd $DOTFILES_PATH
 git submodule init
 git submodule update
-ln -s ~/dotfiles/.vim/ ~/.vim
-ln -s ~/dotfiles/.vimrc ~/.vimrc
+
+DOTFILES=( .vimrc .vim )
+for file in ${DOTFILES[@]}
+do
+  ln -sf $DOTFILES_PATH/$file $HOME/$file
+done
