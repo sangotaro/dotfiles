@@ -8,5 +8,7 @@ git submodule update
 DOTFILES=( .vimrc .vim )
 for file in ${DOTFILES[@]}
 do
-  ln -sf $DOTFILES_PATH/$file $HOME/$file
+  if [ ! -e $HOME/$file ]; then
+    ln -sf $DOTFILES_PATH/$file $HOME/$file
+  fi
 done
