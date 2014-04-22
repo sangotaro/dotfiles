@@ -19,11 +19,12 @@ install tree || true
 install rename || true
 install tig || true
 install dnsmasq || true
-install composer || true
 install android-sdk || true
 install android-ndk || true
 
 # Cask Packages
+cask install google-chrome || true
+cask install firefox || true
 cask install alfred || true
 cask install dash || true
 cask install sublime-text || true
