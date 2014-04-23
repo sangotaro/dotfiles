@@ -23,12 +23,16 @@ install android-sdk || true
 install android-ndk || true
 
 # Cask Packages
+cask install google-japanese-ime || true
+cask install xtrafinder || true
 cask install google-chrome || true
 cask install firefox || true
 cask install alfred || true
 cask install dash || true
+cask install webstorm || true
 cask install sublime-text || true
 cask install mou || true
+cask install kobito || true
 cask install sourcetree || true
 cask install mysqlworkbench || true
 cask install sequel-pro || true
