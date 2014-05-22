@@ -21,6 +21,7 @@ install tig || true
 install dnsmasq || true
 install android-sdk || true
 install android-ndk || true
+install apktool || true
 
 # Cask Packages
 cask install google-japanese-ime || true
