@@ -23,6 +23,7 @@ install android-sdk || true
 install android-ndk || true
 install apktool || true
 install imagemagick || true
+install pnqquant || true
 
 # Cask Packages
 cask install google-japanese-ime || true
