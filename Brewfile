@@ -24,6 +24,8 @@ install android-ndk || true
 install apktool || true
 install imagemagick || true
 install pnqquant || true
+install nodebrew || true
+install rbenv ruby-build || true
 
 # Cask Packages
 cask install google-japanese-ime || true
@@ -42,6 +44,8 @@ cask install mysqlworkbench || true
 cask install sequel-pro || true
 cask install genymotion || true
 cask install iFunBox || true
+cask install virtualbox || true
+cask install vagrant || true
 
 # Remove outdated packages
 cleanup
