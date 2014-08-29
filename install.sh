@@ -6,7 +6,6 @@ git submodule init
 git submodule update
 
 DOTFILES=( .vimrc .vim .bash_profile .bashrc )
-#DOTFILES=( .vimrc .vim )
 for file in ${DOTFILES[@]}
 do
   if [ ! -e $HOME/$file ]; then

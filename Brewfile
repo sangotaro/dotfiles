@@ -35,6 +35,7 @@ cask install firefox || true
 cask install alfred || true
 cask install dash || true
 cask install webstorm || true
+cask install android-studio || true
 cask install eclipse-ide || true
 cask install sublime-text || true
 cask install mou || true
