@@ -4,7 +4,7 @@
 brew update || true
 
 # Upgrade Formula
-brew Upgrade || true
+brew upgrade || true
 
 # Add Repository
 brew tap homebrew/versions || true
