@@ -23,7 +23,7 @@ install android-sdk || true
 install android-ndk || true
 install apktool || true
 install imagemagick || true
-install pnqquant || true
+install pngquant || true
 install nodebrew || true
 install rbenv ruby-build || true
 
