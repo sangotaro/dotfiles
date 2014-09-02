@@ -34,6 +34,7 @@ brew install rbenv ruby-build || true
 # Cask Packages
 brew cask install google-japanese-ime || true
 brew cask install xtrafinder || true
+brew cask install xquartz || true
 brew cask install google-chrome || true
 brew cask install firefox || true
 brew cask install alfred || true
