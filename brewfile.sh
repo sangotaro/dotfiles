@@ -52,6 +52,7 @@ brew cask install genymotion || true
 brew cask install iFunBox || true
 brew cask install virtualbox || true
 brew cask install vagrant || true
+brew cask install dropbox || true
 
 # Remove outdated packages
 brew cleanup
