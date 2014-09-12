@@ -2,7 +2,8 @@ export PS1="[\u@\h \W]\\$"
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
-export PATH=$PATH:$HOME/.nodebrew/current/bin
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH="./node_modules/.bin:$PATH"
 
 alias ls="ls -G"
 
