@@ -30,6 +30,7 @@ brew install imagemagick || true
 brew install pngquant || true
 brew install nodebrew || true
 brew install rbenv ruby-build || true
+brew install ant || true
 
 # Cask Packages
 brew cask install google-japanese-ime || true
