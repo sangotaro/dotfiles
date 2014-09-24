@@ -2,6 +2,7 @@ export PS1="[\u@\h \W]\\$"
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+export JAVA_HOME=`/usr/libexec/java_home`
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH="./node_modules/.bin:$PATH"
 
