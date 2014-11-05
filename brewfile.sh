@@ -29,8 +29,11 @@ brew install apktool || true
 brew install imagemagick || true
 brew install pngquant || true
 brew install nodebrew || true
-brew install rbenv ruby-build || true
+brew install rbenv || true
+brew install ruby-build || true
 brew install ant || true
+brew install pyenv || true
+brew install pyenv-virtualenv || true
 
 # Cask Packages
 brew cask install google-japanese-ime || true
