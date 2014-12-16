@@ -21,6 +21,7 @@ brew install curl || true
 brew install wget || true
 brew install tree || true
 brew install rename || true
+brew install git || true
 brew install tig || true
 brew install dnsmasq || true
 brew install android-sdk || true

@@ -2,6 +2,18 @@ export PS1="[\u@\h \W]\\$"
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad
 
+if [[ -d /usr/local/etc/bash_completion.d ]]; then
+  for file in /usr/local/etc/bash_completion.d/*; do
+    source $file
+  done
+
+  GIT_PS1_SHOWDIRTYSTATE=true
+  GIT_PS1_SHOWUPSTREAM=1
+  GIT_PS1_SHOWUNTRACKEDFILES=1
+  GIT_PS1_SHOWSTASHSTATE=1
+  PS1='\[\033[0m\][\[\033[38;05;41m\]\u@\h \[\033[38;05;45m\]\w\[\033[0m\]] \[\033[38;05;203m\]$(__git_ps1 "(%s)") \[\033[0m\]`date +"%Y/%m/%d %H:%M:%S"` \n\\$ '
+fi
+
 case "${OSTYPE}" in
 darwin*)
   # Node.js
