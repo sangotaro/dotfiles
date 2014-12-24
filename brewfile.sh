@@ -6,13 +6,14 @@ brew update || true
 # Upgrade Formula
 brew upgrade || true
 
+# Brew Cask
+brew install caskroom/cask/brew-cask || true
+
 # Add Repository
 brew tap homebrew/versions || true
 brew tap homebrew/binary || true
 brew tap sanemat/font || true
-
-# Brew Cask
-brew install caskroom/cask/brew-cask || true
+brew tap caskroom/versions
 
 # Packages
 brew install ricty || true
