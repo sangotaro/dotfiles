@@ -1,6 +1,9 @@
 export PS1="[\u@\h \W]\\$"
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad
+export PATH=/usr/local/git/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
 
 if [[ -d /usr/local/etc/bash_completion.d ]]; then
   for file in /usr/local/etc/bash_completion.d/*; do
