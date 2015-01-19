@@ -41,11 +41,19 @@ darwin*)
   export PATH=$PATH:"$ANDROID_SDK_ROOT/tools":"$ANDROID_SDK_ROOT/platform-tools"
 
   # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-  export COCOS_CONSOLE_ROOT=$HOME/work/cocos/cocos2d-x-3.2/tools/cocos2d-console/bin
+  export COCOS_CONSOLE_ROOT=$HOME/work/cocos/cocos2d-x-3.3/tools/cocos2d-console/bin
   export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
+  # Add environment variable COCOS_X_ROOT for cocos2d-x
+  export COCOS_X_ROOT=/Users/A12728/work/cocos/cocos2d-x-3.3
+  export PATH=$COCOS_X_ROOT:$PATH
+
+  # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
+  export COCOS_TEMPLATES_ROOT=/Users/A12728/work/cocos/cocos2d-x-3.3/templates
+  export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
   # Add environment variable ANT_ROOT for cocos2d-x
-  export ANT_ROOT=/usr/local/Cellar/ant/1.9.4/libexec/bin
+  export ANT_ROOT=/usr/local/opt/ant/libexec/bin
   export PATH=$ANT_ROOT:$PATH
 esac
 
