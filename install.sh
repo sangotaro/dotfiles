@@ -12,3 +12,5 @@ do
     ln -sf $DOTFILES_PATH/$file $HOME/$file
   fi
 done
+
+vi +":BundleInstall" +:q +:q
