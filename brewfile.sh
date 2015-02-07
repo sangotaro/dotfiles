@@ -55,7 +55,7 @@ brew cask install sourcetree || true
 brew cask install mysqlworkbench || true
 brew cask install sequel-pro || true
 brew cask install genymotion || true
-brew cask install iFunBox || true
+brew cask install ifunbox || true
 brew cask install virtualbox || true
 brew cask install vagrant || true
 brew cask install dropbox || true
