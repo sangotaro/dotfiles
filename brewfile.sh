@@ -36,8 +36,10 @@ brew install ruby-build || true
 brew install ant || true
 brew install pyenv || true
 brew install pyenv-virtualenv || true
+brew install tmux || true
 
 # Cask Packages
+brew cask install iterm2 || true
 brew cask install google-japanese-ime || true
 brew cask install xtrafinder || true
 brew cask install xquartz || true
