@@ -1,15 +1,19 @@
-#! /bin/sh
+#!/bin/sh
 
-DOTFILES_PATH=`pwd`
-cd $DOTFILES_PATH
-git submodule init
-git submodule update
+set -eu
 
-DOTFILES=( .vimrc .vim .bash_profile .bashrc )
+script_dir_path=$(cd $(dirname $0); pwd)
+
+git --git-dir=$script_dir_path/.git --work-tree=$script_dir_path submodule init
+git --git-dir=$script_dir_path/.git --work-tree=$script_dir_path submodule update
+# git -C submodule init
+# git -C submodule update
+
+DOTFILES=( .vimrc .vim .bash_profile .bashrc .editorconfig)
 for file in ${DOTFILES[@]}
 do
   if [ ! -e $HOME/$file ]; then
-    ln -sf $DOTFILES_PATH/$file $HOME/$file
+    ln -sf $script_dir_path/$file $HOME/$file
   fi
 done
 
