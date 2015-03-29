@@ -1,0 +1,20 @@
+"*":
+  editor:
+    invisibles: {}
+    fontSize: 14
+  core:
+    themes: [
+      "atom-dark-ui"
+      "atom-dark-syntax"
+    ]
+  "exception-reporting":
+    userId: "fec29ad3-7ec0-2118-eb2f-f14cb75bed7c"
+  welcome:
+    showOnStartup: false
+  "project-manager": {}
+  react: {}
+  "atom-beautify":
+    _analyticsUserId: "d4b66b61-6241-4035-9458-cd17569fce56"
+  term2:
+    colors: {}
+  linter: {}
