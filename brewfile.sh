@@ -37,6 +37,8 @@ brew install ant || true
 brew install pyenv || true
 brew install pyenv-virtualenv || true
 brew install tmux || true
+brew install nginx || true
+brew install redis || true
 
 # Cask Packages
 brew cask install iterm2 || true
@@ -47,8 +49,6 @@ brew cask install google-chrome || true
 brew cask install firefox || true
 brew cask install alfred || true
 brew cask install dash || true
-brew cask install webstorm || true
-brew cask install android-studio || true
 brew cask install eclipse-ide || true
 brew cask install sublime-text || true
 brew cask install mou || true
