@@ -28,6 +28,9 @@ darwin*)
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 
+  # Ruby
+  if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
   # Java
   export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
   export JAVA_HOME=`/usr/libexec/java_home`
