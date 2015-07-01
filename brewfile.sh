@@ -39,6 +39,8 @@ brew install pyenv-virtualenv || true
 brew install tmux || true
 brew install nginx || true
 brew install redis || true
+brew install redis || true
+brew install macvim --override-system-vim || true
 
 # Cask Packages
 brew cask install iterm2 || true
