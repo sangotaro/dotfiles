@@ -33,6 +33,8 @@ brew install pngquant || true
 brew install nodebrew || true
 brew install rbenv || true
 brew install ruby-build || true
+brew install rbenv-bundler || true
+brew install rbenv-binstubs || true
 brew install ant || true
 brew install pyenv || true
 brew install pyenv-virtualenv || true

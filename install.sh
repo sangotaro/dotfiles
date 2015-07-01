@@ -9,7 +9,7 @@ git --git-dir=$script_dir_path/.git --work-tree=$script_dir_path submodule updat
 # git -C submodule init
 # git -C submodule update
 
-DOTFILES=( .vimrc .vim .bash_profile .bashrc .editorconfig .atom )
+DOTFILES=( .vimrc .vim .bash_profile .bashrc .editorconfig .atom .gemrc )
 for file in ${DOTFILES[@]}
 do
   if [ ! -e $HOME/$file ]; then
