@@ -16,6 +16,8 @@ brew tap sanemat/font || true
 brew tap caskroom/versions
 
 # Packages
+brew install automake || true
+brew install pkg-config || true
 brew install ricty || true
 brew install jq || true
 brew install curl || true
