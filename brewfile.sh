@@ -67,6 +67,7 @@ brew cask install virtualbox || true
 brew cask install vagrant || true
 brew cask install dropbox || true
 brew cask install netbeans-php || true
+brew cask install macdown || true
 
 # Remove outdated packages
 brew cleanup
