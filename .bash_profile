@@ -35,6 +35,10 @@ darwin*)
   export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
   export JAVA_HOME=`/usr/libexec/java_home`
 
+  # Go
+  export GOPATH=~/go
+  export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
   # android-ndk
   export NDK_ROOT="/usr/local/opt/android-ndk"
   export PATH=$PATH:$NDK_ROOT

@@ -1,73 +1,73 @@
 #!/bin/sh
 
 # Update Homebrew
-brew update || true
+brew update
 
 # Upgrade Formula
-brew upgrade || true
+brew upgrade
 
 # Brew Cask
-brew install caskroom/cask/brew-cask || true
+brew install caskroom/cask/brew-cask
 
 # Add Repository
-brew tap homebrew/versions || true
-brew tap homebrew/binary || true
-brew tap sanemat/font || true
 brew tap caskroom/versions
+brew tap homebrew/versions
+brew tap homebrew/binary
+brew tap sanemat/font
 
 # Packages
-brew install automake || true
-brew install pkg-config || true
-brew install ricty || true
-brew install jq || true
-brew install curl || true
-brew install wget || true
-brew install tree || true
-brew install rename || true
-brew install git || true
-brew install tig || true
-brew install dnsmasq || true
-brew install android-sdk || true
-brew install android-ndk || true
-brew install apktool || true
-brew install imagemagick || true
-brew install pngquant || true
-brew install nodebrew || true
-brew install rbenv || true
-brew install ruby-build || true
-brew install rbenv-bundler || true
-brew install rbenv-binstubs || true
-brew install ant || true
-brew install pyenv || true
-brew install pyenv-virtualenv || true
-brew install tmux || true
-brew install nginx || true
-brew install redis || true
-brew install macvim --override-system-vim || true
+brew install android-sdk
+brew install android-ndk
+brew install ant
+brew install apktool
+brew install automake
+brew install curl
+brew install dnsmasq
+brew install git
+brew install go
+brew install imagemagick
+brew install jq
+brew install macvim --override-system-vim
+brew install mercurial
+brew install nginx
+brew install nodebrew
+brew install pkg-config
+brew install pngquant
+brew install pyenv
+brew install pyenv-virtualenv
+brew install rbenv
+brew install redis
+brew install ricty
+brew install ruby-build
+brew install rbenv-bundler
+brew install rbenv-binstubs
+brew install rename
+brew install tree
+brew install tig
+brew install tmux
+brew install wget
 
 # Cask Packages
-brew cask install iterm2 || true
-brew cask install google-japanese-ime || true
-brew cask install xtrafinder || true
-brew cask install xquartz || true
-brew cask install google-chrome || true
-brew cask install firefox || true
-brew cask install alfred || true
-brew cask install dash || true
-brew cask install eclipse-ide || true
-brew cask install sublime-text || true
-brew cask install mou || true
-brew cask install kobito || true
-brew cask install sourcetree || true
-brew cask install mysqlworkbench || true
-brew cask install sequel-pro || true
-brew cask install genymotion || true
-brew cask install ifunbox || true
-brew cask install virtualbox || true
-brew cask install vagrant || true
-brew cask install dropbox || true
-brew cask install netbeans-php || true
-brew cask install macdown || true
+brew cask install alfred
+brew cask install dash
+brew cask install dropbox
+brew cask install eclipse-ide
+brew cask install firefox
+brew cask install genymotion
+brew cask install google-chrome
+brew cask install google-japanese-ime
+brew cask install ifunbox
+brew cask install iterm2
+brew cask install kobito
+brew cask install macdown
+brew cask install mysqlworkbench
+brew cask install sequel-pro
+brew cask install sourcetree
+brew cask install sublime-text
+brew cask install vagrant
+brew cask install virtualbox
+brew cask install xquartz
+brew cask install xtrafinder
 
 # Remove outdated packages
 brew cleanup
