@@ -48,6 +48,7 @@ brew install wget
 # Cask Packages
 brew cask install alfred
 brew cask install dash
+brew cask install diskwave
 brew cask install dropbox
 brew cask install eclipse-ide
 brew cask install firefox
