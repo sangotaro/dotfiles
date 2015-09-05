@@ -29,14 +29,12 @@ brew install imagemagick
 brew install jq
 brew install macvim --override-system-vim
 brew install mercurial
-brew install nginx
 brew install nodebrew
 brew install pkg-config
 brew install pngquant
 brew install pyenv
 brew install pyenv-virtualenv
 brew install rbenv
-brew install redis
 brew install ricty
 brew install ruby-build
 brew install rbenv-bundler
