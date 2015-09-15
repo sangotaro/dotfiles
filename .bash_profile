@@ -65,6 +65,7 @@ darwin*)
 esac
 
 # .bashrc
-if [ -f ~/.bashrc ]; then
-. ~/.bashrc
-fi
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+# .bashrc.local
+[[ -f ~/.bashrc.local ]] && . ~/.bashrc.local
