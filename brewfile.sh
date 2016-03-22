@@ -50,7 +50,6 @@ brew cask install alfred
 brew cask install dash
 brew cask install diskwave
 brew cask install dropbox
-brew cask install eclipse-ide
 brew cask install firefox
 brew cask install genymotion
 brew cask install google-chrome
@@ -63,8 +62,8 @@ brew cask install mysqlworkbench
 brew cask install sequel-pro
 brew cask install sourcetree
 brew cask install sublime-text
-brew cask install vagrant
-brew cask install virtualbox
+#brew cask install vagrant
+#brew cask install virtualbox
 brew cask install xquartz
 brew cask install xtrafinder
 
