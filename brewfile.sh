@@ -6,11 +6,7 @@ brew update
 # Upgrade Formula
 brew upgrade
 
-# Brew Cask
-brew install caskroom/cask/brew-cask
-
 # Add Repository
-brew tap caskroom/versions
 brew tap homebrew/versions
 brew tap homebrew/binary
 brew tap sanemat/font
@@ -29,6 +25,7 @@ brew install imagemagick
 brew install jq
 brew install macvim --override-system-vim
 brew install mercurial
+brew install mysql --client-only
 brew install nodebrew
 brew install pkg-config
 brew install pngquant
