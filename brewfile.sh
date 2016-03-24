@@ -37,6 +37,7 @@ brew install ruby-build
 brew install rbenv-bundler
 brew install rbenv-binstubs
 brew install rename
+brew install squid
 brew install tree
 brew install tig
 brew install tmux
