@@ -53,6 +53,8 @@ brew cask install google-chrome
 brew cask install google-japanese-ime
 brew cask install ifunbox
 brew cask install iterm2
+brew cask install java
+brew cask install java7
 brew cask install kobito
 brew cask install macdown
 brew cask install mysqlworkbench
