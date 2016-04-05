@@ -19,6 +19,15 @@ fi
 
 case "${OSTYPE}" in
 darwin*)
+  # GNU
+  export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+  export PATH=$(brew --prefix diffutils)/bin:$PATH
+  export PATH=$(brew --prefix findutils)/libexec/gnubin:$PATH
+  export PATH=$(brew --prefix gawk)/bin:$PATH
+  export PATH=$(brew --prefix grep)/bin:$PATH
+  export PATH=$(brew --prefix gnu-sed)/libexec/gnubin:$PATH
+  export PATH=$(brew --prefix gzip)/bin:$PATH
+
   # Node.js
   export PATH=$HOME/.nodebrew/current/bin:$PATH
   export PATH="./node_modules/.bin:$PATH"

@@ -9,6 +9,7 @@ brew upgrade
 # Add Repository
 brew tap homebrew/versions
 brew tap homebrew/binary
+brew tap homebrew/dupes
 brew tap sanemat/font
 
 # Packages
@@ -17,10 +18,17 @@ brew install android-ndk
 brew install ant
 brew install apktool
 brew install automake
+brew install coreutils
 brew install curl
+brew install diffutils
 brew install dnsmasq
+brew install findutils
+brew install gawk
 brew install git
+brew install gnu-sed
 brew install go
+brew install grep --with-default-names
+brew install gzip
 brew install imagemagick
 brew install jq
 brew install macvim --override-system-vim
