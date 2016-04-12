@@ -32,6 +32,7 @@ brew install gzip
 brew install imagemagick
 brew install jq
 brew install macvim --override-system-vim
+brew install maven
 brew install mercurial
 brew install mysql --client-only
 brew install nodebrew
