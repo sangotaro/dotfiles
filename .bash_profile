@@ -39,6 +39,7 @@ darwin*)
 
   # Ruby
   if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+  export PATH="./.bundle/bin:$PATH"
 
   # Java
   export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8

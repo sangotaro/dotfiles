@@ -43,7 +43,6 @@ brew install pyenv-virtualenv
 brew install rbenv
 brew install ricty
 brew install ruby-build
-brew install rbenv-bundler
 brew install rbenv-binstubs
 brew install rename
 brew install squid
