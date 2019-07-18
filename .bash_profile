@@ -28,6 +28,10 @@ darwin*)
   export PATH=$(brew --prefix gnu-sed)/libexec/gnubin:$PATH
   export PATH=$(brew --prefix gzip)/bin:$PATH
 
+  # PHP
+  export PATH="/usr/local/opt/php@7.1/bin:$PATH"
+  export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
+
   # Node.js
   export PATH=$HOME/.nodebrew/current/bin:$PATH
   export PATH="./node_modules/.bin:$PATH"
@@ -49,29 +53,6 @@ darwin*)
   export GOPATH=~/go
   export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
-  # android-ndk
-  export NDK_ROOT="/usr/local/opt/android-ndk"
-  export PATH=$PATH:$NDK_ROOT
-
-  # android-sdk
-  export ANDROID_SDK_ROOT="/usr/local/opt/android-sdk"
-  export PATH=$PATH:"$ANDROID_SDK_ROOT/tools":"$ANDROID_SDK_ROOT/platform-tools"
-
-  # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-  export COCOS_CONSOLE_ROOT=$HOME/work/cocos/cocos2d-x-3.3/tools/cocos2d-console/bin
-  export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
-  # Add environment variable COCOS_X_ROOT for cocos2d-x
-  export COCOS_X_ROOT=/Users/A12728/work/cocos/cocos2d-x-3.3
-  export PATH=$COCOS_X_ROOT:$PATH
-
-  # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-  export COCOS_TEMPLATES_ROOT=/Users/A12728/work/cocos/cocos2d-x-3.3/templates
-  export PATH=$COCOS_TEMPLATES_ROOT:$PATH
-
-  # Add environment variable ANT_ROOT for cocos2d-x
-  export ANT_ROOT=/usr/local/opt/ant/libexec/bin
-  export PATH=$ANT_ROOT:$PATH
 esac
 
 # .bashrc
