@@ -20,38 +20,41 @@ fi
 case "${OSTYPE}" in
 darwin*)
   # GNU
-  export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
-  export PATH=$(brew --prefix diffutils)/bin:$PATH
-  export PATH=$(brew --prefix findutils)/libexec/gnubin:$PATH
-  export PATH=$(brew --prefix gawk)/bin:$PATH
-  export PATH=$(brew --prefix grep)/bin:$PATH
-  export PATH=$(brew --prefix gnu-sed)/libexec/gnubin:$PATH
-  export PATH=$(brew --prefix gzip)/bin:$PATH
+#  export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+#  export PATH=$(brew --prefix diffutils)/bin:$PATH
+#  export PATH=$(brew --prefix findutils)/libexec/gnubin:$PATH
+#  export PATH=$(brew --prefix gawk)/bin:$PATH
+#  export PATH=$(brew --prefix grep)/bin:$PATH
+#  export PATH=$(brew --prefix gnu-sed)/libexec/gnubin:$PATH
+#  export PATH=$(brew --prefix gzip)/bin:$PATH
 
   # PHP
-  export PATH="/usr/local/opt/php@7.1/bin:$PATH"
-  export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
+#  export PATH="/usr/local/opt/php@7.1/bin:$PATH"
+#  export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
 
   # Node.js
-  export PATH=$HOME/.nodebrew/current/bin:$PATH
-  export PATH="./node_modules/.bin:$PATH"
+#  export PATH=$HOME/.nodebrew/current/bin:$PATH
+#  export PATH="./node_modules/.bin:$PATH"
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
   # Python
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
+#  export PYENV_ROOT="$HOME/.pyenv"
+#  export PATH="$PYENV_ROOT/bin:$PATH"
+#  eval "$(pyenv init -)"
 
   # Ruby
-  if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-  export PATH="./.bundle/bin:$PATH"
+#  if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+#  export PATH="./.bundle/bin:$PATH"
 
   # Java
-  export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
-  export JAVA_HOME=`/usr/libexec/java_home`
+#  export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+#  export JAVA_HOME=`/usr/libexec/java_home`
 
   # Go
-  export GOPATH=~/go
-  export PATH=$PATH:/usr/local/opt/go/libexec/bin
+#  export GOPATH=~/go
+#  export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 esac
 
