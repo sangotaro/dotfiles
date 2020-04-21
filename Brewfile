@@ -8,7 +8,7 @@ brew "git"
 brew "imagemagick"
 brew "jq"
 brew "kustomize"
-brew "macvim", args: ["--override-system-vim"]
+brew "vim"
 brew "nvm"
 brew "stern"
 brew "tig"
