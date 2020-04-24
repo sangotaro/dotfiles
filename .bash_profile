@@ -5,20 +5,24 @@ export PATH=/usr/local/git/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
-if [[ -d /usr/local/etc/bash_completion.d ]]; then
-  for file in /usr/local/etc/bash_completion.d/*; do
-    source $file
-  done
+BREW_PREFIX=$(brew --prefix)
 
+[[ -r "${BREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${BREW_PREFIX}/etc/profile.d/bash_completion.sh"
+
+if [[ -d "${BREW_PREFIX}/etc/bash_completion.d" ]]; then
   GIT_PS1_SHOWDIRTYSTATE=true
   GIT_PS1_SHOWUPSTREAM=1
   GIT_PS1_SHOWUNTRACKEDFILES=1
   GIT_PS1_SHOWSTASHSTATE=1
   PS1='\[\033[0m\][\[\033[38;05;41m\]\u@\h \[\033[38;05;45m\]\w\[\033[0m\]] \[\033[38;05;203m\]$(__git_ps1 "(%s)") \[\033[0m\]`date +"%Y/%m/%d %H:%M:%S"` \n\\$ '
+
+  if which kubectl > /dev/null; then kubectl completion bash > "${BREW_PREFIX}/etc/bash_completion.d/kubectl"; fi
 fi
 
 case "${OSTYPE}" in
 darwin*)
+  export BASH_SILENCE_DEPRECATION_WARNING=1
+
   # GNU
 #  export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 #  export PATH=$(brew --prefix diffutils)/bin:$PATH

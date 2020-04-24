@@ -4,6 +4,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 
+brew "bash-completion"
 brew "git"
 brew "imagemagick"
 brew "jq"
