@@ -61,6 +61,8 @@ darwin*)
 #  export GOPATH=~/go
 #  export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
+  # MySQL
+  export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 esac
 
 # .bashrc
