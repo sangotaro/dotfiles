@@ -2,19 +2,19 @@
   "entries": {
     "tap": {
       "homebrew/bundle": {
-        "revision": "c1bcc5c7d58d37b4092ca067e5ae015ac144272f"
+        "revision": "6cc55a61616f6c4c195bdc13847060b699a0e407"
       },
       "homebrew/cask": {
-        "revision": "9b46a6d85024c15ad65c110b933447cfba7d8595"
+        "revision": "2cac1b57e30631062d7b439e30e81d2cf41fb7b4"
       },
       "homebrew/cask-fonts": {
         "revision": "2997a377d214b56d9f5ee864bea6b5c7f2581ca6"
       },
       "homebrew/cask-versions": {
-        "revision": "df43945d996b4d15136fac571aa2f0899ff721f4"
+        "revision": "0bf23a9ef3947af8679456e44baffc36dfc5f20a"
       },
       "homebrew/core": {
-        "revision": "4f2bb93a4f433ba8ff3b0f9130b26ab59f5f34b6"
+        "revision": "c8be98d8c24c79277e46fc34df5106a11863499a"
       }
     },
     "brew": {
@@ -284,18 +284,24 @@
         "options": {
           "full_name": "font-hackgen"
         }
+      },
+      "corretto": {
+        "version": "11.0.7.10.1",
+        "options": {
+          "full_name": "corretto"
+        }
       }
     }
   },
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.16-30-ga30de68",
+        "HOMEBREW_VERSION": "2.2.16",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "4f2bb93a4f433ba8ff3b0f9130b26ab59f5f34b6",
-        "CLT": "11.4.1.0.1.1586360307",
-        "Xcode": "11.4.1",
-        "macOS": "10.15.4"
+        "Homebrew/homebrew-core": "c8be98d8c24c79277e46fc34df5106a11863499a",
+        "CLT": "11.3.1.0.1.1576735732",
+        "Xcode": "11.3.1",
+        "macOS": "10.15.2"
       }
     }
   }

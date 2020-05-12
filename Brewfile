@@ -16,4 +16,5 @@ brew "tig"
 brew "tree"
 brew "wget"
 
+cask "corretto"
 cask "font-hackgen"
