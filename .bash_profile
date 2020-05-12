@@ -36,14 +36,6 @@ darwin*)
 #  export PATH="/usr/local/opt/php@7.1/bin:$PATH"
 #  export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
 
-  # Node.js
-#  export PATH=$HOME/.nodebrew/current/bin:$PATH
-#  export PATH="./node_modules/.bin:$PATH"
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-  eval "`npm completion`"
-
   # Python
 #  export PYENV_ROOT="$HOME/.pyenv"
 #  export PATH="$PYENV_ROOT/bin:$PATH"
@@ -60,9 +52,6 @@ darwin*)
   # Go
 #  export GOPATH=~/go
 #  export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-  # MySQL
-  export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 esac
 
 # .bashrc
