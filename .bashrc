@@ -49,9 +49,12 @@ export NVM_DIR="$HOME/.nvm"
 eval "`npm completion`"
 source "$HOME/dotfiles/nvm.bash"
 
-#  Ruby
+# Ruby
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # export PATH="./.bundle/bin:$PATH"
+
+# Python
+export PATH="${BREW_PREFIX}/opt/python@3/libexec/bin:$PATH"
 
 # MySQL
 export PATH="${BREW_PREFIX}/opt/mysql-client/bin:$PATH"
