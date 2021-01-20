@@ -15,6 +15,9 @@ export PATH=/usr/local/git/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 BREW_PREFIX=$(brew --prefix)
 
 [[ -r "${BREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${BREW_PREFIX}/etc/profile.d/bash_completion.sh"
@@ -54,7 +57,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # export PATH="./.bundle/bin:$PATH"
 
 # Python
-export PATH="${BREW_PREFIX}/opt/python@3/libexec/bin:$PATH"
+export PATH="${BREW_PREFIX}/opt/python@3.9/libexec/bin:$PATH"
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+export PIPENV_VENV_IN_PROJECT=true
 
 # MySQL
 export PATH="${BREW_PREFIX}/opt/mysql-client/bin:$PATH"
