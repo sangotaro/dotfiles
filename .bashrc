@@ -23,12 +23,6 @@ BREW_PREFIX=$(brew --prefix)
 [[ -r "${BREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${BREW_PREFIX}/etc/profile.d/bash_completion.sh"
 
 if [[ -d "${BREW_PREFIX}/etc/bash_completion.d" ]]; then
-  GIT_PS1_SHOWDIRTYSTATE=true
-  GIT_PS1_SHOWUPSTREAM=1
-  GIT_PS1_SHOWUNTRACKEDFILES=1
-  GIT_PS1_SHOWSTASHSTATE=1
-  PS1='\[\033[0m\][\[\033[38;05;41m\]\u@\h \[\033[38;05;45m\]\w\[\033[0m\]] \[\033[38;05;203m\]$(__git_ps1 "(%s)") \[\033[0m\]`date +"%Y/%m/%d %H:%M:%S"` \n\\$ '
-
   if which kubectl > /dev/null; then kubectl completion bash > "${BREW_PREFIX}/etc/bash_completion.d/kubectl"; fi
 fi
 
@@ -71,7 +65,42 @@ export PATH="${BREW_PREFIX}/opt/mysql-client/bin:$PATH"
 # psql
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
+# gcloud
+function gcloud-activate() {
+  CONFIGURATION=$(gcloud config configurations list | grep -v NAME | peco)
+  NAME=$(echo ${CONFIGURATION} | awk '{print $1}')
+  PROJECT=$(echo ${CONFIGURATION} | awk '{print $4}')
+  gcloud config configurations activate $NAME
+  CLUSTERS=$(kubectl config get-clusters | grep "${PROJECT}")
+  if [ -n "${CLUSTERS}" ]; then
+    kubectl config use-context $(echo "${CLUSTERS}" | peco --select-1)
+  fi
+}
 
-function change_gcp_project() {
-  gcloud config configurations activate $(gcloud config configurations list | awk '{print $1}' | grep -v NAME | peco)
+function gcloud-current() {
+  cat $HOME/.config/gcloud/active_config
+}
+
+# Prompt
+COLOR_OFF="\[\033[0m\]"
+RED="\[\033[38;05;203m\]"
+GREEN="\[\033[38;05;41m\]"
+BLUE="\[\033[38;05;45m\]"
+
+PROMPT_COMMAND="_prompt_command;${PROMPT_COMMAND}"
+
+_prompt_command() {
+  PS1="${COLOR_OFF}[\u@\h "
+  PS1+="${BLUE}\w"
+  PS1+="${COLOR_OFF}] "
+  # GIT_PS1 は bash_completion.d にある git-prompt に依存している
+  if [[ -d "${BREW_PREFIX}/etc/bash_completion.d" ]]; then
+    GIT_PS1_SHOWDIRTYSTATE=true
+    GIT_PS1_SHOWUPSTREAM=1
+    GIT_PS1_SHOWUNTRACKEDFILES=1
+    GIT_PS1_SHOWSTASHSTATE=1
+    PS1+="${RED}$(__git_ps1 "(%s)") "
+  fi
+  if [[ -e ~/.config/gcloud ]]; then PS1+="${GREEN}(gcloud: $(gcloud-current)) "; fi
+  PS1+="${COLOR_OFF}`date +"%Y/%m/%d %H:%M:%S"` \n\\$ "
 }
