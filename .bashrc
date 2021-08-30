@@ -61,9 +61,17 @@ export PATH="${BREW_PREFIX}/opt/python@3.9/libexec/bin:$PATH"
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 export PIPENV_VENV_IN_PROJECT=true
 
+# Go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 # MySQL
 export PATH="${BREW_PREFIX}/opt/mysql-client/bin:$PATH"
 
 # psql
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
+
+function change_gcp_project() {
+  gcloud config configurations activate $(gcloud config configurations list | awk '{print $1}' | grep -v NAME | peco)
+}
