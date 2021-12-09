@@ -35,6 +35,9 @@ fi
 # export PATH=$(brew --prefix gnu-sed)/libexec/gnubin:$PATH
 # export PATH=$(brew --prefix gzip)/bin:$PATH
 
+# direnv
+if which direnv > /dev/null; then eval "$(direnv hook bash)"; fi
+
 # Java
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 export JAVA_HOME=`/usr/libexec/java_home`
@@ -67,7 +70,7 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 # gcloud
 function gcloud-activate() {
-  CONFIGURATION=$(gcloud config configurations list | grep -v NAME | peco)
+  CONFIGURATION=$(gcloud config configurations list | grep -v NAME | peco --on-cancel error)
   NAME=$(echo ${CONFIGURATION} | awk '{print $1}')
   PROJECT=$(echo ${CONFIGURATION} | awk '{print $4}')
   gcloud config configurations activate $NAME
